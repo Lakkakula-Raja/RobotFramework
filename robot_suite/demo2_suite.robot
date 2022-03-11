@@ -6,3 +6,4 @@ TC1
     Log To Console    ${cdt}
     Log    ${cdt}
     Comment     we will get cureent time
+TC@2
