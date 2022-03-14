@@ -20,4 +20,18 @@ TC1
     Click Element       link=Logout
     Comment     done
 TC2
-    Log To Console    konda
+    Log To Console    Raja
+    Append To Environment Variable    path      ${EXECDIR}${/}driver${/}
+    Open Browser    url=https://opensource-demo.orangehrmlive.com/    browser=chrome
+    Set Selenium Implicit Wait    20s
+    Maximize Browser Window
+    Input Text    id=txtUsername    Admin
+    Input Password    id=txtPassword    admin123
+    Click Button    id=btnLogin
+    Click Element    id=menu_pim_viewMyDetails
+    Click Element    link=Emergency Contacts
+    Click Element    id=btnAddContact
+    Input Text    id=emgcontacts_name    raja
+    Input Text    id=emgcontacts_relationship    brother
+    Input Text    id=emgcontacts_homePhone    99008102
+    Click Button    id=btnSaveEContact
