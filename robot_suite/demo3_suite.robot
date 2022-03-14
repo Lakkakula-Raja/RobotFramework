@@ -16,3 +16,9 @@ TC2
     Copy File    R:${/}Temp${/}My_Folder${/}notes.txt    R:${/}Temp${/}copy.txt
     Remove File    R:${/}Temp${/}My_Folder${/}notes.txt 
     Remove Directory    R:${/}Temp${/}My_Folder
+
+TC3
+    Create Directory    ${EXECDIR}${/}konda
+    Create File    ${EXECDIR}${/}konda${/}babu.txt
+    Sleep    5s
+    Remove Directory    ${EXECDIR}${/}konda     True
