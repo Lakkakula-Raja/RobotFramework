@@ -17,9 +17,11 @@ TC1
     #getInTouchEmail
     Input Text    id=getInTouchEmail    kondababu123@gmail.com
     #getInTouchMobile
-    Input Text    id=getInTouchMobile    8919420420
+    Input Text    id=getInTouchMobile    12345
+
     #getInTouchEmpCount
     Input Text    id=getInTouchEmpCount    16
     #type="submit"
     Click Element    xpath=//button[@type="submit"]
-    Close Window
+    Element Text Should Be    xpath=//div[contains(text(),'10')]    Mobile Number should be 10 digits
+    #Close Window
