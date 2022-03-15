@@ -37,3 +37,5 @@ TC1
     Click Element    id=edit-field-mode-of-payment-und-1
     Click Element    id=edit-field-code-of-conduct-und-0
     Click Element    id=edit-preview
+    Choose File    id=edit-field-memorandum-article-of-asso-und-0-upload    R:${/}konda.pdf
+    Click Element    xpath=(//input[@value="Upload"])[1]
