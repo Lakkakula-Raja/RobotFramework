@@ -14,7 +14,8 @@ TC1
     Input Text    name=fldLoginUserId    test123
     #CONTINUE
     Click Element    link=CONTINUE
-    #Unselect Frame
+    Unselect Frame
+    Log To Console    Done
 
 
 
