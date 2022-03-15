@@ -1,97 +1,91 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1.3 (Python 3.10.2 on win32)" generated="20220315 10:49:00.542" rpa="false" schemaversion="2">
-<suite id="s1" name="Demo2 Goto Suite" source="B:\2.L&amp;T Technology Services InternShip\week 6.Robot framework\robot_project\selenium_suite\demo2_goto_suite.robot">
+<robot generator="Robot 4.1.3 (Python 3.10.2 on win32)" generated="20220315 12:10:13.021" rpa="false" schemaversion="2">
+<suite id="s1" name="Demo3 Mb Suite" source="B:\2.L&amp;T Technology Services InternShip\week 6.Robot framework\robot_project\selenium_suite\demo3_mb_suite.robot">
 <test id="s1-t1" name="TC1">
-<kw name="Append To Environment Variable" library="OperatingSystem">
-<arg>path</arg>
-<arg>${EXECDIR}${/}driver${/}</arg>
-<doc>Appends given ``values`` to environment variable ``name``.</doc>
-<msg timestamp="20220315 10:49:00.804" level="INFO">Environment variable 'path' set to value 'C:\Program Files\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Users\dell\AppData\Local\Programs\Python\Python310\Scripts\;C:\Users\dell\AppData\Local\Programs\Python\Python310\;C:\Users\dell\anaconda3;C:\Users\dell\anaconda3\Library\mingw-w64\bin;C:\Users\dell\anaconda3\Library\usr\bin;C:\Users\dell\anaconda3\Library\bin;C:\Users\dell\anaconda3\Scripts;C:\Users\dell\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Java\jdk-17.0.1\bin\;C:\Program Files\JetBrains\PyCharm Community Edition 2021.3.2\bin;;B:\2.L&amp;T Technology Services InternShip\week 6.Robot framework\robot_project\driver\'.</msg>
-<status status="PASS" starttime="20220315 10:49:00.804" endtime="20220315 10:49:00.804"/>
-</kw>
 <kw name="Open Browser" library="SeleniumLibrary">
-<arg>url=https://www.goto.com/meeting/</arg>
 <arg>browser=chrome</arg>
+<arg>executable_path=${EXECDIR}${/}driver${/}chromedriver.exe</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220315 10:49:00.805" level="INFO">Opening browser 'chrome' to base url 'https://www.goto.com/meeting/'.</msg>
-<status status="PASS" starttime="20220315 10:49:00.805" endtime="20220315 10:49:09.416"/>
+<msg timestamp="20220315 12:10:13.294" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20220315 12:10:13.293" endtime="20220315 12:10:15.519"/>
 </kw>
 <kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
-<arg>20s</arg>
+<arg>30s</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" starttime="20220315 10:49:09.417" endtime="20220315 10:49:09.418"/>
+<status status="PASS" starttime="20220315 12:10:15.519" endtime="20220315 12:10:15.521"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220315 10:49:09.419" endtime="20220315 10:49:09.540"/>
+<status status="PASS" starttime="20220315 12:10:15.521" endtime="20220315 12:10:15.652"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>url=https://www.medibuddy.in/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220315 12:10:15.656" level="INFO">Opening url 'https://www.medibuddy.in/'</msg>
+<status status="PASS" starttime="20220315 12:10:15.654" endtime="20220315 12:10:19.931"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>id=truste-consent-button</arg>
+<arg>xpath=//button[text()="Not Now"]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220315 10:49:09.542" level="INFO">Clicking element 'id=truste-consent-button'.</msg>
-<status status="PASS" starttime="20220315 10:49:09.541" endtime="20220315 10:49:09.634"/>
+<msg timestamp="20220315 12:10:19.934" level="INFO">Clicking element 'xpath=//button[text()="Not Now"]'.</msg>
+<status status="PASS" starttime="20220315 12:10:19.932" endtime="20220315 12:10:30.357"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>link=Get a Demo</arg>
+<arg>link=For Employer</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220315 10:49:09.634" level="INFO">Clicking element 'link=Get a Demo'.</msg>
-<status status="PASS" starttime="20220315 10:49:09.634" endtime="20220315 10:49:17.952"/>
+<msg timestamp="20220315 12:10:30.358" level="INFO">Clicking element 'link=For Employer'.</msg>
+<status status="PASS" starttime="20220315 12:10:30.358" endtime="20220315 12:10:30.555"/>
+</kw>
+<kw name="Close Window" library="SeleniumLibrary">
+<doc>Closes currently opened and selected browser window/tab.</doc>
+<status status="PASS" starttime="20220315 12:10:30.556" endtime="20220315 12:10:30.634"/>
+</kw>
+<kw name="Switch Window" library="SeleniumLibrary">
+<arg>MediBuddy LaunchPad</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" starttime="20220315 12:10:30.636" endtime="20220315 12:11:17.714"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
-<arg>xpath=//input[@data-sc-field-name="firstName"]</arg>
-<arg>john</arg>
+<arg>id=getInTouchName</arg>
+<arg>Raja</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220315 10:49:17.954" level="INFO">Typing text 'john' into text field 'xpath=//input[@data-sc-field-name="firstName"]'.</msg>
-<status status="PASS" starttime="20220315 10:49:17.953" endtime="20220315 10:49:18.068"/>
+<msg timestamp="20220315 12:11:17.715" level="INFO">Typing text 'Raja' into text field 'id=getInTouchName'.</msg>
+<status status="PASS" starttime="20220315 12:11:17.715" endtime="20220315 12:11:17.811"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
-<arg>xpath=//input[@data-sc-field-name="lastName"]</arg>
-<arg>wick</arg>
+<arg>id=getInTouchEmail</arg>
+<arg>kondababu123@gmail.com</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220315 10:49:18.069" level="INFO">Typing text 'wick' into text field 'xpath=//input[@data-sc-field-name="lastName"]'.</msg>
-<status status="PASS" starttime="20220315 10:49:18.068" endtime="20220315 10:49:18.178"/>
+<msg timestamp="20220315 12:11:17.812" level="INFO">Typing text 'kondababu123@gmail.com' into text field 'id=getInTouchEmail'.</msg>
+<status status="PASS" starttime="20220315 12:11:17.812" endtime="20220315 12:11:17.938"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
-<arg>xpath=//input[@data-sc-field-name="email"]</arg>
-<arg>johnwick587@gmail.com</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220315 10:49:18.178" level="INFO">Typing text 'johnwick587@gmail.com' into text field 'xpath=//input[@data-sc-field-name="email"]'.</msg>
-<status status="PASS" starttime="20220315 10:49:18.178" endtime="20220315 10:49:20.763"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>xpath=//input[@data-sc-field-name="phone"]</arg>
+<arg>id=getInTouchMobile</arg>
 <arg>8919420420</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220315 10:49:20.764" level="INFO">Typing text '8919420420' into text field 'xpath=//input[@data-sc-field-name="phone"]'.</msg>
-<status status="PASS" starttime="20220315 10:49:20.764" endtime="20220315 10:49:20.859"/>
+<msg timestamp="20220315 12:11:17.939" level="INFO">Typing text '8919420420' into text field 'id=getInTouchMobile'.</msg>
+<status status="PASS" starttime="20220315 12:11:17.939" endtime="20220315 12:11:18.032"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
-<arg>xpath=//input[@data-sc-field-name="company"]</arg>
-<arg>LTTS</arg>
+<arg>id=getInTouchEmpCount</arg>
+<arg>16</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220315 10:49:20.859" level="INFO">Typing text 'LTTS' into text field 'xpath=//input[@data-sc-field-name="company"]'.</msg>
-<status status="PASS" starttime="20220315 10:49:20.859" endtime="20220315 10:49:20.956"/>
-</kw>
-<kw name="Select From List By Label" library="SeleniumLibrary">
-<arg>xpath=//select[@data-sc-field-name="employees"]</arg>
-<arg>10 - 99</arg>
-<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
-<msg timestamp="20220315 10:49:20.957" level="INFO">Selecting options from selection list 'xpath=//select[@data-sc-field-name="employees"]' by label 10 - 99.</msg>
-<status status="PASS" starttime="20220315 10:49:20.957" endtime="20220315 10:49:21.040"/>
+<msg timestamp="20220315 12:11:18.033" level="INFO">Typing text '16' into text field 'id=getInTouchEmpCount'.</msg>
+<status status="PASS" starttime="20220315 12:11:18.033" endtime="20220315 12:11:18.112"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath=//input[@type="submit"]</arg>
+<arg>xpath=//button[@type="submit"]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220315 10:49:21.040" level="INFO">Clicking element 'xpath=//input[@type="submit"]'.</msg>
-<status status="PASS" starttime="20220315 10:49:21.040" endtime="20220315 10:49:21.193"/>
+<msg timestamp="20220315 12:11:18.113" level="INFO">Clicking element 'xpath=//button[@type="submit"]'.</msg>
+<status status="PASS" starttime="20220315 12:11:18.113" endtime="20220315 12:11:18.162"/>
 </kw>
-<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
-<doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20220315 10:49:21.194" endtime="20220315 10:49:23.631"/>
+<kw name="Close Window" library="SeleniumLibrary">
+<doc>Closes currently opened and selected browser window/tab.</doc>
+<status status="PASS" starttime="20220315 12:11:18.162" endtime="20220315 12:11:20.571"/>
 </kw>
-<status status="PASS" starttime="20220315 10:49:00.803" endtime="20220315 10:49:23.632"/>
+<status status="PASS" starttime="20220315 12:10:13.292" endtime="20220315 12:11:20.572"/>
 </test>
-<status status="PASS" starttime="20220315 10:49:00.543" endtime="20220315 10:49:23.634"/>
+<status status="PASS" starttime="20220315 12:10:13.022" endtime="20220315 12:11:20.574"/>
 </suite>
 <statistics>
 <total>
@@ -100,7 +94,7 @@
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Demo2 Goto Suite">Demo2 Goto Suite</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Demo3 Mb Suite">Demo3 Mb Suite</stat>
 </suite>
 </statistics>
 <errors>
