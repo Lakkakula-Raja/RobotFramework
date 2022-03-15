@@ -13,7 +13,7 @@ TC1
     Click Element    link=For Employer
     Close Window
     Switch Window       MediBuddy LaunchPad
-    Input Text    id=getInTouchName    Raja
+    Input Text    id=getInTouchName    konda
     #getInTouchEmail
     Input Text    id=getInTouchEmail    kondababu123@gmail.com
     #getInTouchMobile
