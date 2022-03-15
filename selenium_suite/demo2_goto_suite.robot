@@ -9,17 +9,11 @@ TC1
     Maximize Browser Window
     Click Element    id=truste-consent-button
     Click Element    link=Get a Demo
-    #Click Element    link=Try It Free
     Input Text    xpath=//input[@data-sc-field-name="firstName"]    john
     Input Text    xpath=//input[@data-sc-field-name="lastName"]    wick
-    Input Text    xpath=//input[@data-sc-field-name="email"]    johnwick512@gmail.com
+    Input Text    xpath=//input[@data-sc-field-name="email"]    johnwick587@gmail.com
     Input Text    xpath=//input[@data-sc-field-name="phone"]    8919420420
     Input Text    xpath=//input[@data-sc-field-name="company"]    LTTS
-    #data-sc-field-name="employees"
-    #Select From List By Index    class="goto-form__select"     2
-    #Select From List By Index    locator
-    #Select From List By Value    class="goto-form__select"      "10 - 99"
     Select From List By Label    xpath=//select[@data-sc-field-name="employees"]     10 - 99
     Click Element    xpath=//input[@type="submit"]
-    #Click Element    class="goto-form__submit"
-    Close Browser
+    [Teardown]      Close Browser
