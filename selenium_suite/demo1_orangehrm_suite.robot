@@ -35,3 +35,4 @@ TC2
     Input Text    id=emgcontacts_relationship    brother
     Input Text    id=emgcontacts_homePhone    99008102
     Click Button    id=btnSaveEContact
+    Table Should Contain    id=emgcontact_list    99008102
