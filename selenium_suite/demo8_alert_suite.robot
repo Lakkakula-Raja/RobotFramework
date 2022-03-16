@@ -20,3 +20,4 @@ TC2
     Click Element    link=Calculate Membership Fee
     ${alt}      Handle Alert    action=ACCEPT       timeout=50s
     Log To Console    ${alt}
+    Should Be Equal    ${alt}    Please enter amount in digit and greater than zero.
