@@ -17,6 +17,7 @@ TC1 Sign Up
     Open Browser    browser=chrome     executable_path=${EXECDIR}${/}driver${/}chromedriver.exe
     Maximize Browser Window
     Set Selenium Implicit Wait    20s
+    Set Selenium Speed    1s
 
     #1. Navigate https://www.royalcaribbean.com/account/
     Go To    url=https://www.royalcaribbean.com/account/
@@ -37,7 +38,9 @@ TC1 Sign Up
     Click Element    xpath=//span[contains(text(),'April')]
     #6. Day as 4
     Click Element    xpath=//span[contains(text(),'Day')]
+    Scroll Element Into View    xpath=//span[contains(text(),'26')]
     Click Element    xpath=//span[contains(text(),'26')]
     #7. year as 1992
     #aria-labelledby="input-date-dropdown"
+
     Input Text    xpath=//input[@data-placeholder="Year"]    1998
