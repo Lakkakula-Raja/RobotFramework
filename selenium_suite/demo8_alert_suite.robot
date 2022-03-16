@@ -11,6 +11,7 @@ TC1
     #/html/body/form/center/table/tbody/tr[2]/td[2]/table/tbody/tr[3]/td/a/img
     ${alt}      Handle Alert    action=ACCEPT       timeout=50s
     Log To Console    ${alt}
+    Should Be Equal    ${alt}    Customer ID ${SPACE}cannot be left blank.
 
 TC2
     Open Browser    browser=chrome     executable_path=${EXECDIR}${/}driver${/}chromedriver.exe
