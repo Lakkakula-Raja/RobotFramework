@@ -33,11 +33,11 @@ TC1 Sign Up
 
     #5. Month as April
     #id="mat-select-value-1"
-    Click Element    xpath=//span[text()='Month']
+    Click Element    xpath=//span[contains(text(),'Month')]
     Click Element    xpath=//span[contains(text(),'April')]
     #6. Day as 4
-    Click Element    xpath=//span[text()='Day']
+    Click Element    xpath=//span[contains(text(),'Day')]
     Click Element    xpath=//span[contains(text(),'26')]
     #7. year as 1992
     #aria-labelledby="input-date-dropdown"
-    #Input Text    xpath=//input[@aria-labelledby="input-date-dropdown"]    1998
+    Input Text    xpath=//input[@data-placeholder="Year"]    1998

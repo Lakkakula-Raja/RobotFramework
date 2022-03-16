@@ -1,85 +1,153 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1.3 (Python 3.10.2 on win32)" generated="20220316 12:04:02.437" rpa="false" schemaversion="2">
+<robot generator="Robot 4.1.3 (Python 3.10.2 on win32)" generated="20220316 12:08:33.054" rpa="false" schemaversion="2">
 <suite id="s1" name="Demo9 Royel Suite" source="B:\2.L&amp;T Technology Services InternShip\week 6.Robot framework\robot_project\selenium_suite\demo9_royel_suite.robot">
 <test id="s1-t1" name="TC1 Sign Up">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>browser=chrome</arg>
 <arg>executable_path=${EXECDIR}${/}driver${/}chromedriver.exe</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220316 12:04:02.696" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
-<status status="PASS" starttime="20220316 12:04:02.696" endtime="20220316 12:04:05.093"/>
+<msg timestamp="20220316 12:08:33.307" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20220316 12:08:33.306" endtime="20220316 12:08:35.499"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220316 12:04:05.094" endtime="20220316 12:04:05.216"/>
+<status status="PASS" starttime="20220316 12:08:35.500" endtime="20220316 12:08:35.634"/>
 </kw>
 <kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
 <arg>20s</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" starttime="20220316 12:04:05.218" endtime="20220316 12:04:05.222"/>
+<status status="PASS" starttime="20220316 12:08:35.636" endtime="20220316 12:08:35.641"/>
 </kw>
 <kw name="Go To" library="SeleniumLibrary">
 <arg>url=https://www.royalcaribbean.com/account/</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220316 12:04:05.224" level="INFO">Opening url 'https://www.royalcaribbean.com/account/'</msg>
-<status status="PASS" starttime="20220316 12:04:05.224" endtime="20220316 12:04:08.502"/>
+<msg timestamp="20220316 12:08:35.644" level="INFO">Opening url 'https://www.royalcaribbean.com/account/'</msg>
+<status status="PASS" starttime="20220316 12:08:35.643" endtime="20220316 12:08:40.911"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>link=Create an account</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220316 12:04:08.504" level="INFO">Clicking element 'link=Create an account'.</msg>
-<status status="PASS" starttime="20220316 12:04:08.503" endtime="20220316 12:04:12.896"/>
+<msg timestamp="20220316 12:08:40.912" level="INFO">Clicking element 'link=Create an account'.</msg>
+<status status="PASS" starttime="20220316 12:08:40.911" endtime="20220316 12:08:43.457"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>xpath=//input[@data-placeholder="First name/Given name"]</arg>
 <arg>raja</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220316 12:04:12.897" level="INFO">Typing text 'raja' into text field 'xpath=//input[@data-placeholder="First name/Given name"]'.</msg>
-<status status="PASS" starttime="20220316 12:04:12.897" endtime="20220316 12:04:13.799"/>
+<msg timestamp="20220316 12:08:43.459" level="INFO">Typing text 'raja' into text field 'xpath=//input[@data-placeholder="First name/Given name"]'.</msg>
+<status status="PASS" starttime="20220316 12:08:43.459" endtime="20220316 12:08:48.893"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>xpath=//input[@data-placeholder="Last name/Surname"]</arg>
 <arg>raja</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220316 12:04:13.800" level="INFO">Typing text 'raja' into text field 'xpath=//input[@data-placeholder="Last name/Surname"]'.</msg>
-<status status="PASS" starttime="20220316 12:04:13.800" endtime="20220316 12:04:13.951"/>
+<msg timestamp="20220316 12:08:48.894" level="INFO">Typing text 'raja' into text field 'xpath=//input[@data-placeholder="Last name/Surname"]'.</msg>
+<status status="PASS" starttime="20220316 12:08:48.893" endtime="20220316 12:08:49.030"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath=//span[text()='Month']</arg>
+<arg>xpath=//span[contains(text(),'Month')]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220316 12:04:13.952" level="INFO">Clicking element 'xpath=//span[text()='Month']'.</msg>
-<status status="PASS" starttime="20220316 12:04:13.952" endtime="20220316 12:04:14.053"/>
+<msg timestamp="20220316 12:08:49.031" level="INFO">Clicking element 'xpath=//span[contains(text(),'Month')]'.</msg>
+<status status="PASS" starttime="20220316 12:08:49.031" endtime="20220316 12:08:49.158"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>xpath=//span[contains(text(),'April')]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220316 12:04:14.054" level="INFO">Clicking element 'xpath=//span[contains(text(),'April')]'.</msg>
-<status status="PASS" starttime="20220316 12:04:14.053" endtime="20220316 12:04:14.129"/>
+<msg timestamp="20220316 12:08:49.159" level="INFO">Clicking element 'xpath=//span[contains(text(),'April')]'.</msg>
+<status status="PASS" starttime="20220316 12:08:49.159" endtime="20220316 12:08:49.246"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath=//span[text()='Day']</arg>
+<arg>xpath=//span[contains(text(),'Day')]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220316 12:04:14.129" level="INFO">Clicking element 'xpath=//span[text()='Day']'.</msg>
-<status status="PASS" starttime="20220316 12:04:14.129" endtime="20220316 12:04:14.204"/>
+<msg timestamp="20220316 12:08:49.247" level="INFO">Clicking element 'xpath=//span[contains(text(),'Day')]'.</msg>
+<status status="PASS" starttime="20220316 12:08:49.247" endtime="20220316 12:08:49.322"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>xpath=//span[contains(text(),'26')]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220316 12:04:14.205" level="INFO">Clicking element 'xpath=//span[contains(text(),'26')]'.</msg>
-<status status="PASS" starttime="20220316 12:04:14.205" endtime="20220316 12:04:14.285"/>
+<msg timestamp="20220316 12:08:49.323" level="INFO">Clicking element 'xpath=//span[contains(text(),'26')]'.</msg>
+<msg timestamp="20220316 12:09:23.318" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-6.png"&gt;&lt;img src="selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220316 12:09:23.321" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;span class="mat-option-text"&gt;...&lt;/span&gt; is not clickable at point (735, 613). Other element would receive the click: &lt;div class="cdk-overlay-backdrop cdk-overlay-transparent-backdrop"&gt;&lt;/div&gt;
+  (Session info: chrome=99.0.4844.51)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00B79943+2595139]
+	Ordinal0 [0x00B0C9F1+2148849]
+	Ordinal0 [0x00A04528+1066280]
+	Ordinal0 [0x00A37621+1275425]
+	Ordinal0 [0x00A35657+1267287]
+	Ordinal0 [0x00A3333B+1258299]
+	Ordinal0 [0x00A3207D+1253501]
+	Ordinal0 [0x00A27AB3+1211059]
+	Ordinal0 [0x00A4B9EC+1358316]
+	Ordinal0 [0x00A27474+1209460]
+	Ordinal0 [0x00A4BC04+1358852]
+	Ordinal0 [0x00A5BAF2+1424114]
+	Ordinal0 [0x00A4B806+1357830]
+	Ordinal0 [0x00A26086+1204358]
+	Ordinal0 [0x00A26F96+1208214]
+	GetHandleVerifier [0x00D1B232+1658114]
+	GetHandleVerifier [0x00DD312C+2411516]
+	GetHandleVerifier [0x00C0F261+560433]
+	GetHandleVerifier [0x00C0E366+556598]
+	Ordinal0 [0x00B1286B+2173035]
+	Ordinal0 [0x00B175F8+2192888]
+	Ordinal0 [0x00B176E5+2193125]
+	Ordinal0 [0x00B211FC+2232828]
+	BaseThreadInitThunk [0x74FF6739+25]
+	RtlGetFullPathName_UEx [0x772B8E7F+1215]
+	RtlGetFullPathName_UEx [0x772B8E4D+1165]
+</msg>
+<status status="FAIL" starttime="20220316 12:08:49.322" endtime="20220316 12:09:23.322"/>
 </kw>
-<status status="PASS" starttime="20220316 12:04:02.695" endtime="20220316 12:04:14.285"/>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath=//input[@data-placeholder="Year"]</arg>
+<arg>1998</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220316 12:09:23.322" endtime="20220316 12:09:23.322"/>
+</kw>
+<status status="FAIL" starttime="20220316 12:08:33.305" endtime="20220316 12:09:23.323">ElementClickInterceptedException: Message: element click intercepted: Element &lt;span class="mat-option-text"&gt;...&lt;/span&gt; is not clickable at point (735, 613). Other element would receive the click: &lt;div class="cdk-overlay-backdrop cdk-overlay-transparent-backdrop"&gt;&lt;/div&gt;
+  (Session info: chrome=99.0.4844.51)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00B79943+2595139]
+	Ordinal0 [0x00B0C9F1+2148849]
+	Ordinal0 [0x00A04528+1066280]
+	Ordinal0 [0x00A37621+1275425]
+	Ordinal0 [0x00A35657+1267287]
+	Ordinal0 [0x00A3333B+1258299]
+	Ordinal0 [0x00A3207D+1253501]
+	Ordinal0 [0x00A27AB3+1211059]
+	Ordinal0 [0x00A4B9EC+1358316]
+	Ordinal0 [0x00A27474+1209460]
+	Ordinal0 [0x00A4BC04+1358852]
+	Ordinal0 [0x00A5BAF2+1424114]
+	Ordinal0 [0x00A4B806+1357830]
+	Ordinal0 [0x00A26086+1204358]
+	Ordinal0 [0x00A26F96+1208214]
+	GetHandleVerifier [0x00D1B232+1658114]
+	GetHandleVerifier [0x00DD312C+2411516]
+	GetHandleVerifier [0x00C0F261+560433]
+	GetHandleVerifier [0x00C0E366+556598]
+	Ordinal0 [0x00B1286B+2173035]
+	Ordinal0 [0x00B175F8+2192888]
+	Ordinal0 [0x00B176E5+2193125]
+	Ordinal0 [0x00B211FC+2232828]
+	BaseThreadInitThunk [0x74FF6739+25]
+	RtlGetFullPathName_UEx [0x772B8E7F+1215]
+	RtlGetFullPathName_UEx [0x772B8E4D+1165]
+</status>
 </test>
-<status status="PASS" starttime="20220316 12:04:02.439" endtime="20220316 12:04:14.287"/>
+<status status="FAIL" starttime="20220316 12:08:33.056" endtime="20220316 12:09:23.325"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Demo9 Royel Suite">Demo9 Royel Suite</stat>
+<stat pass="0" fail="1" skip="0" id="s1" name="Demo9 Royel Suite">Demo9 Royel Suite</stat>
 </suite>
 </statistics>
 <errors>
