@@ -18,7 +18,6 @@ TC1 Sign Up
     Maximize Browser Window
     Set Selenium Implicit Wait    20s
     Set Selenium Speed    1s
-
     #1. Navigate https://www.royalcaribbean.com/account/
     Go To    url=https://www.royalcaribbean.com/account/
     #2. Click on create an account
@@ -26,11 +25,9 @@ TC1 Sign Up
     #3. Enter first name
     #id="mat-input-3"
     Input Text    xpath=//input[@data-placeholder="First name/Given name"]    raja
-
     #4. Enter last name
     #data-placeholder="Last name/Surname"
     Input Text    xpath=//input[@data-placeholder="Last name/Surname"]    konda
-
     #5. Month as April
     #id="mat-select-value-1"
     Click Element    xpath=//span[contains(text(),'Month')]
@@ -41,13 +38,12 @@ TC1 Sign Up
     Click Element    xpath=//span[contains(text(),'26')]
     #7. year as 1992
     #aria-labelledby="input-date-dropdown"
-
     Input Text    xpath=//input[@data-placeholder="Year"]    1998
     #class="mat-option-text"
     # India
     Click Element    xpath=//span[contains(text(),'residence')]
     Scroll Element Into View    xpath=//span[contains(text(),'Iraq')]
-    Click Element    xpath=//span[contains(text(),'India')]
+    Click Element    xpath=(//span[contains(text(),'India')])[2]
     #data-placeholder="Email address"
     Input Text    xpath=//input[@data-placeholder="Email address"]    kondababu@gmail.com
     #security
