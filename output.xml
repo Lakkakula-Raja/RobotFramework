@@ -1,40 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1.3 (Python 3.10.2 on win32)" generated="20220316 20:02:30.530" rpa="false" schemaversion="2">
-<suite id="s1" name="Demo5 Suite" source="B:\2.L&amp;T Technology Services InternShip\week 6.Robot framework\robot_project\robot_suite\demo5_suite.robot">
-<test id="s1-t1" name="TC1">
-<kw name="Create Dictionary" library="BuiltIn">
-<var>${dict}</var>
-<arg>sid=587</arg>
-<arg>sname=raja</arg>
-<arg>per=62.4</arg>
-<arg>mid=konda@gmail.com</arg>
-<doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<msg timestamp="20220316 20:02:30.561" level="INFO">${dict} = {'sid': '587', 'sname': 'raja', 'per': '62.4', 'mid': 'konda@gmail.com'}</msg>
-<status status="PASS" starttime="20220316 20:02:30.561" endtime="20220316 20:02:30.561"/>
+<robot generator="Robot 4.1.3 (Python 3.10.2 on win32)" generated="20220318 14:19:24.130" rpa="false" schemaversion="2">
+<suite id="s1" name="Demo1 Suite" source="B:\2.L&amp;T Technology Services InternShip\week 6.Robot framework\robot_project\db_suite\demo1_suite.robot">
+<kw name="Connect To Database" library="DatabaseLibrary" type="SETUP">
+<arg>dbapiModuleName=pymysql</arg>
+<arg>dbName=dbfree_db</arg>
+<arg>dbUsername=dbfree_db</arg>
+<arg>dbPassword=12345678</arg>
+<arg>dbHost=db4free.net</arg>
+<arg>dbPort=3306</arg>
+<doc>Loads the DB API 2.0 module given `dbapiModuleName` then uses it to
+connect to the database using `dbName`, `dbUsername`, and `dbPassword`.</doc>
+<msg timestamp="20220318 14:19:24.219" level="INFO">Connecting using : pymysql.connect(db=dbfree_db, user=dbfree_db, passwd=12345678, host=db4free.net, port=3306, charset=None) </msg>
+<status status="PASS" starttime="20220318 14:19:24.170" endtime="20220318 14:19:25.475"/>
+</kw>
+<test id="s1-t1" name="TC3">
+<kw name="Query" library="DatabaseLibrary">
+<var>@{output}</var>
+<arg>Select * from Products</arg>
+<doc>Uses the input `selectStatement` to query for the values that will be returned as a list of tuples. Set optional
+input `sansTran` to True to run command without an explicit transaction commit or rollback.
+Set optional input `returnAsDict` to True to return values as a list of dictionaries.</doc>
+<msg timestamp="20220318 14:19:25.475" level="INFO">Executing : Query  |  Select * from Products </msg>
+<msg timestamp="20220318 14:19:26.039" level="INFO">@{output} = [ (1, 'Basu', 'ji') | (10, 'Basu', '7 plus 128 Gb') | (11, 'Basu', 'mayank') | (13, 'Basu', 'xxx') | (23, 'Basu', 'justname') | (42, 'Basu', 'isha') | (67, 'Basu', 'justname') | (100, 'Basu', 'amazon'...</msg>
+<status status="PASS" starttime="20220318 14:19:25.475" endtime="20220318 14:19:26.039"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
-<arg>${dict}[sid]</arg>
+<arg>${output}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220316 20:02:30.561" endtime="20220316 20:02:30.561"/>
+<status status="PASS" starttime="20220318 14:19:26.040" endtime="20220318 14:19:26.041"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
-<arg>${dict}[sname]</arg>
+<arg>${output}[0]</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220316 20:02:30.561" endtime="20220316 20:02:30.561"/>
+<status status="PASS" starttime="20220318 14:19:26.042" endtime="20220318 14:19:26.043"/>
 </kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${dict}[per]</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220316 20:02:30.561" endtime="20220316 20:02:30.561"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${dict}[mid]</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220316 20:02:30.561" endtime="20220316 20:02:30.561"/>
-</kw>
-<status status="PASS" starttime="20220316 20:02:30.561" endtime="20220316 20:02:30.561"/>
+<status status="PASS" starttime="20220318 14:19:25.475" endtime="20220318 14:19:26.044"/>
 </test>
-<status status="PASS" starttime="20220316 20:02:30.530" endtime="20220316 20:02:30.561"/>
+<kw name="Disconnect From Database" library="DatabaseLibrary" type="TEARDOWN">
+<doc>Disconnects from the database.</doc>
+<msg timestamp="20220318 14:19:26.047" level="INFO">Executing : Disconnect From Database</msg>
+<status status="PASS" starttime="20220318 14:19:26.046" endtime="20220318 14:19:26.047"/>
+</kw>
+<status status="PASS" starttime="20220318 14:19:24.131" endtime="20220318 14:19:26.047"/>
 </suite>
 <statistics>
 <total>
@@ -43,7 +50,7 @@
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Demo5 Suite">Demo5 Suite</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Demo1 Suite">Demo1 Suite</stat>
 </suite>
 </statistics>
 <errors>
